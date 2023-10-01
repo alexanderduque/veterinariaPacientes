@@ -23,7 +23,7 @@ function App() {
   return (
     <div className="video-background">
       <video autoPlay muted loop id="myVideo">
-        <source src={process.env.PUBLIC_URL+"public\video.mp4"} type="video/mp4" />
+        <source src={process.env.PUBLIC_URL+"public/video.mp4"} type="video/mp4" />
         Tu navegador no admite el elemento de video.
       </video>
       <div className="content">
