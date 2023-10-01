@@ -24,11 +24,9 @@ function App() {
     <div className="video-background">
       <video autoPlay muted loop id="myVideo">
         <source src="/video.mp4" type="video/mp4" />
-        Tu navegador no admite el elemento de video.
+
       </video>
-      <div className="content">
-        {/* Contenido de tu página */}
-      </div>
+
       <Header
 
       /> {/*EN JSX SE CIERRA ASI LAS ETIQUETAS SIN CIERRE /> */}

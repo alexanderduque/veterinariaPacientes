@@ -10,7 +10,7 @@ import Paciente from "./Paciente";
 // REPASAR CLASE 87
 //REPASAR CLASE BOTON ELIMINAR
 
-const Formulario = ({ pacientes, setPacientes, paciente,setPaciente }) => {
+const Formulario = ({ pacientes, setPacientes, paciente, setPaciente }) => {
 
   const [nombre, setNombre] = useState("");
   const [propietario, setPropietario] = useState("");
@@ -19,25 +19,25 @@ const Formulario = ({ pacientes, setPacientes, paciente,setPaciente }) => {
   const [sintomas, setSintomas] = useState("");
   const [error, setError] = useState(false)
 
-  useEffect(()=>{
-    
-   if (Object.keys(paciente).length > 0){
+  useEffect(() => {
+
+    if (Object.keys(paciente).length > 0) {
       setNombre(paciente.nombre)
       setPropietario(paciente.propietario)
       setEmail(paciente.email)
       setAlta(paciente.alta)
       setSintomas(paciente.sintomas)
-   }
+    }
 
-  },[paciente])
+  }, [paciente])
 
   //GENERANDO ID DE CADA LISTA DE PACIENTES
-  const generarId= () =>{
+  const generarId = () => {
 
-    const random= Math.random().toString(36).substring(2);
+    const random = Math.random().toString(36).substring(2);
     const fecha = Date.now().toString(36)
 
-    return random+fecha;
+    return random + fecha;
   }
 
   // GENERANDO FUNCION DE COMPROBACION SI TODO ESTA COMPLETADO
@@ -63,26 +63,26 @@ const Formulario = ({ pacientes, setPacientes, paciente,setPaciente }) => {
 
     }
 
-    if(paciente.id){
+    if (paciente.id) {
       //EDITANDO EL REGISTRO
 
-      objetoPacientes.id=paciente.id
+      objetoPacientes.id = paciente.id
 
-    const pacientesActualizados= pacientes.map (pacienteState => pacienteState.id === paciente.id 
-      ? objetoPacientes : pacienteState)
+      const pacientesActualizados = pacientes.map(pacienteState => pacienteState.id === paciente.id
+        ? objetoPacientes : pacienteState)
 
       setPacientes(pacientesActualizados)
 
       setPaciente({})
 
-    }else{
+    } else {
       //NUEVO REGISTRO DE PACIENTE
 
-      objetoPacientes.id= generarId();
+      objetoPacientes.id = generarId();
       setPacientes([...pacientes, objetoPacientes])
     }
 
-  
+
 
     //REINICIAR FORMULARIO
     setNombre("")
@@ -94,17 +94,17 @@ const Formulario = ({ pacientes, setPacientes, paciente,setPaciente }) => {
 
   return (
     <div className="md:w-1/2 lg:w-2/5 mx-5">
-      <h2 className="font-black text-2xl text-center text-white ">Seguimiento Pacientes </h2>
+      <h2 className="font-black text-2xl text-center text-white "> Lista De Pacientes </h2>
 
       <p className="text-xl mt-5 text-center mb-10 text-white font-black">Añade pacientes y {""}
 
-        <span className="text-indigo-700 font-black">Administralos</span>
+        <span className="text-lime-400  font-black">Administralos</span>
       </p>
 
       <form className="bg-white shadow-md rounded-lg py-10 px-5 mb-10" onSubmit={handleSubmit}>
 
         {error && <Error>
-          
+
           <p>Todos los campos son obligatorios</p>
 
         </Error>}
@@ -154,7 +154,7 @@ const Formulario = ({ pacientes, setPacientes, paciente,setPaciente }) => {
 
         <div className="mb-5">
           <label htmlFor="alta"
-            className="block text-gray-700 uppercase font-bold">Alta</label>
+            className="block text-gray-700 uppercase font-bold">Fecha De Alta</label>
 
           <input
             id="alta"
@@ -183,7 +183,7 @@ const Formulario = ({ pacientes, setPacientes, paciente,setPaciente }) => {
 
           <input
             type="submit"
-            value={ paciente.id ? "Editar Paciente" : "Agregar Paciente"}
+            value={paciente.id ? "Editar Paciente" : "Agregar Paciente"}
             className="bg-indigo-600 w-full p-3 text-white uppercase font-bold
        hover:bg-green-600 cursor-pointer transition-all"
 
