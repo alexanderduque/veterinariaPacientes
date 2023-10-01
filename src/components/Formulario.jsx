@@ -94,11 +94,11 @@ const Formulario = ({ pacientes, setPacientes, paciente,setPaciente }) => {
 
   return (
     <div className="md:w-1/2 lg:w-2/5 mx-5">
-      <h2 className="font-black text-3xl text-center">Seguimiento Pacientes </h2>
+      <h2 className="font-black text-2xl text-center text-white ">Seguimiento Pacientes </h2>
 
-      <p className="text-lg mt-5 text-center mb-10">Añade pacientes y {""}
+      <p className="text-xl mt-5 text-center mb-10 text-white font-black">Añade pacientes y {""}
 
-        <span className="text-indigo-600 font-bold">administralos</span>
+        <span className="text-indigo-700 font-black">Administralos</span>
       </p>
 
       <form className="bg-white shadow-md rounded-lg py-10 px-5 mb-10" onSubmit={handleSubmit}>
@@ -185,7 +185,7 @@ const Formulario = ({ pacientes, setPacientes, paciente,setPaciente }) => {
             type="submit"
             value={ paciente.id ? "Editar Paciente" : "Agregar Paciente"}
             className="bg-indigo-600 w-full p-3 text-white uppercase font-bold
-       hover:bg-green-500 cursor-pointer transition-all"
+       hover:bg-green-600 cursor-pointer transition-all"
 
           />
 

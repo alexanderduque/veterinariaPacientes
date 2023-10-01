@@ -4,15 +4,6 @@ import { useEffect } from "react"
 //CREAR UN USEEFECT QUE IMPRIME EN CONSOLA NUEVO PACIENTE CADA QUE SE AGREGA UNO
 
 const ListadoPacientes = ({ pacientes,setPaciente, eliminarPaciente }) => {
-
-//RETO useEffect
-/*useEffect( ()=> {
-if ( pacientes.length > 0){
-  console.log("NUEVO PACIENTE AGREGADO")
-}
- 
-}, [pacientes])*/
-
   
   return (
     <div className="md:w-1/2 lg:w-3/5 md:h-screen md:overflow-y-scroll">
@@ -20,10 +11,10 @@ if ( pacientes.length > 0){
       {pacientes && pacientes.length ? (
 
         <>
-          <h2 className="text-center font-black text-3xl">Listado Pacientes</h2>
-          <p className="text-xl mt-5 text-center mb-10">
+          <h2 className="text-center font-black text-2xl text-white">Listado Pacientes</h2>
+          <p className="text-xl mt-5 text-center mb-10 text-white font-black">
             Administra tus {""}
-            <span className="text-indigo-600 font-bold">Pacientes y citas</span>
+            <span className="text-indigo-600 font-black">Pacientes y citas</span>
           </p>
 
           {pacientes.map((paciente) => {
@@ -46,10 +37,10 @@ if ( pacientes.length > 0){
       ) : (
 
         <>
-        <h2 className="text-center font-black text-3xl">No Hay Pacientes</h2>
-          <p className="text-xl mt-5 text-center mb-10">
+        <h2 className="text-center font-black text-2xl text-white">No Hay Pacientes</h2>
+          <p className="text-xl mt-5 text-center mb-10 text-white font-black">
             Agrega un paciente Nuevo {""}
-            <span className="text-indigo-600 font-bold">y aparecera en este Apartado</span>
+            <span className="text-indigo-600 font-black">y aparecera en este Apartado</span>
           </p>
         
         

@@ -2,6 +2,7 @@ import { useState } from "react"
 import Formulario from "./components/Formulario"
 import Header from "./components/Header"
 import ListadoPacientes from "./components/ListadoPacientes"
+import "./index.css"
 
 
 
@@ -20,7 +21,14 @@ const eliminarPaciente = (id) => {
 
 
   return (
-<div className="container mx-auto mt-20">
+<div className="video-background">
+<video autoPlay muted loop id="myVideo">
+        <source src="src\assets\img\video-body.mp4" type="video/mp4" />
+       
+      </video>
+      <div className="content">
+        {/* Contenido de tu página */}
+      </div>
 
 <Header
 
