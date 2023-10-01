@@ -23,7 +23,7 @@ const eliminarPaciente = (id) => {
   return (
 <div className="video-background">
 <video autoPlay muted loop id="myVideo">
-        <source src="src/assets/video-body.mp4" type="video/mp4" />
+        <source src="https://mega.nz/file/pmUxkaBA#t9N_qn0YCeETOb1XOkhbPWVpPpRxTCc4ea8dvH_Rrww" type="video/mp4" />
        
       </video>
       <div className="content">
