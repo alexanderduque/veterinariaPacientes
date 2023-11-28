@@ -1,8 +1,14 @@
-# React + Vite
+# Doctor Perruno App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+¡Hola! Es un placer presentarte este proyecto en el que he invertido mucho esfuerzo, tiempo y dedicación. Espero que sea de tu agrado. El objetivo era lograr las siguientes funciones:
 
-Currently, two official plugins are available:
+1 Crear un perfil para cada paciente con sus características: nombre de la mascota, nombre del propietario, email, fecha de alta y síntomas.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2 Almacenar la información de cada paciente de manera específica para acceder a ella en cualquier momento.
+
+3 Editar la información de los pacientes cuando sea necesario, manteniendo todo actualizado.
+
+4 Eliminar perfiles de pacientes que ya no necesitemos en nuestros registros.
+
+Después de lograr todo esto, el proyecto fue finalizado. Puedes verlo y echarle un vistazo aquí: https://doctor-perruno.netlify.app/
+
